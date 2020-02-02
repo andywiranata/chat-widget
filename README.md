@@ -1,11 +1,12 @@
-# Sample Ticketing with Firebase RTDB [WORK IN PROGRESS]
+# Sample Chat Dashboard with Firebase RTDB [WORK IN PROGRESS]
+https://andywiranata-chat-widget.firebaseapp.com
 
 ## Features
 
 - Demo Widget
 - Firebase RTDB
 - Sample creating ticket
-- Sample send message
+- Sample send message (chat)
 
 ## HOW TO USE
 - import public url [url will update]
