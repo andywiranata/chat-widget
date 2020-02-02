@@ -18,11 +18,10 @@
   </head>
   <script>
     function openApp() {
-      window.ChatWidget.openWindow();
       // window. = new SboxChatWidget();
-      const test = window.ChatWidget;
-      test.start({}, ()=>{
-        test.openWindow();
+      const ch = window.ChatWidget;
+      ch.start({}, ()=>{
+        ch.openWindow();
         
       });
 
@@ -33,15 +32,6 @@
     <div id="chat-widget"></div>
     <div style="padding-top:400px"></div>
     <button onclick="openApp()">Open Widget</button>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start`.
-      To create a production bundle, use `npm run build`.
-    -->
   </body>
 </html>

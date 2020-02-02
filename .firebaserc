@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "andywiranata-42555"
+  },
+  "targets": {
+    "andywiranata-42555": {
+      "hosting": {
+        "andywiranata-chat-widget": [
+          "andywiranata-chat-widget"
+        ]
+      }
+    }
+  }
+}

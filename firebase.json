@@ -1,24 +1,23 @@
 {
-    "hosting": {
-      "site": "dev-sayurbox-7a7d7",
-      "public": "build",
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ],
-      "headers": [
-        {
-          "source" : "**/*.@(jpg|jpeg|gif|png|ico|svg|css|js|woff|woff2)",
-          "headers" : [
-            {
-              "key" : "Cache-Control",
-              "value" : "max-age=31536000"
-            }
-          ]
-        }
-      ]
-    }
+  "hosting": {
+    "target": "andywiranata-chat-widget", 
+    "public": "build",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source" : "**/*.@(jpg|jpeg|gif|png|ico|svg|css|js|woff|woff2)",
+        "headers" : [
+          {
+            "key" : "Cache-Control",
+            "value" : "max-age=31536000"
+          }
+        ]
+      }
+    ]
   }
-  
+}
