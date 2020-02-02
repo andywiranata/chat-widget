@@ -68,7 +68,7 @@ class ChatWidget {
     }
     const pushId = firebase.database().ref(nodeTickets(this.userId, '')).push().key;
     const node = nodeTickets(this.userId, pushId);
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       firebase.database().ref(node).set({
         channelUrl: node,
         date: firebase.database.ServerValue.TIMESTAMP,
@@ -87,12 +87,12 @@ class ChatWidget {
   
   }
   sendMessage(message, channelKey) {
-
-    return firebase.database().ref(nodeMessages(this.userId, channelKey)).set(message);
+    const nodeMessageRef = nodeMessages(this.userId, channelKey);
+    const pushId = firebase.database().ref(nodeMessageRef).push().key;
+    return firebase.database().ref(`${nodeMessageRef}/${pushId}`).set(message);
 
   }
   getPreviousMessageList(key) {
-    console.log(key);
     return new Promise((resolve, reject) => {
       firebase.database().ref(nodeMessages(this.userId, key))
       .once('value').then((snapshot)=> {

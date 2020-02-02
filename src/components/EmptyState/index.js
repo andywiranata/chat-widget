@@ -26,7 +26,7 @@ const Button = styled.button`
 
 const EmptyState = ({ handleClickChatWithUs, loading })=> (
     <Wrapper>
-        <img src={imgChatWithUs} width="50%" />
+        <img src={imgChatWithUs} width="50%" alt="img-empty-state" />
          <Text>Need some help ? chat with us.</Text>
         <Button onClick={handleClickChatWithUs} disabled={loading}>{ !loading ? 'Create ticket now!' : 'creating...'}</Button>
     </Wrapper>

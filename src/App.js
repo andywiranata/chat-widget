@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MessageList, TicketList, Loading, EmptyState } from './components/index';
+import { MessageList, TicketList } from './components/index';
 import styled from 'styled-components'
 
 const WIDTH = window.innerWidth;
@@ -101,21 +101,30 @@ class App extends Component {
   handleSendMessage = () => {
     if (!this.state.newMessage === '') return;
     const { messageList, newMessage } = this.state;
+    const length = messageList.length;
     const message = {
       author: 'ME',
       message: newMessage,
-      loading: true,
       createdAt: Date.now(),
     }
-    console.log(this.state);
-    messageList.push(message);
-    // window.ChatWidget.sendMessage(message, this.state.selectedChannelKey)
-
+    messageList.push({...message, loading: true});
     this.setState({
       messageList,
       newMessage: '',
-    }, () => {
-    });
+    }, ()=> {
+      window.ChatWidget
+      .sendMessage(message, this.state.selectedChannelKey)
+      .then(()=> {
+        this.setState((state)=> {
+          const newMessageList = state.messageList;
+          newMessageList[length] = { ...message, loading: false }
+          return {
+            ...state,
+            messageList
+          };
+        })
+      });  
+    })
   }
   handleClickClose = () => {
     this.close();

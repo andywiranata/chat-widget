@@ -10,7 +10,7 @@ export default class ToolbarButton extends Component {
     const { icon } = this.props;
     return (
       <Wrapper >
-        <img src={icon} />
+        <img src={icon} alt="icon" />
       </Wrapper>
     );
   }

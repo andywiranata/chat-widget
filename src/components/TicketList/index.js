@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TicketListItem from '../TicketListItem';
 import styled from 'styled-components';
 import Toolbar from '../Toolbar';
