@@ -30,5 +30,6 @@
 ## TODO
 - Feature close ticket
 - Migrate to react hooks and context
+- Support mobile view
 
 
