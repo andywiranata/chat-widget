@@ -1,6 +1,9 @@
 # Sample Chat Dashboard with Firebase RTDB [WORK IN PROGRESS]
 https://andywiranata-chat-widget.firebaseapp.com
 
+<img src="demo-chat.png" alt="drawing" style="width:100px;"/>
+
+
 ## Features
 
 - Demo Widget
